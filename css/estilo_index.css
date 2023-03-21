@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+header .nav_fijo{
+    display: block;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+}
+header{
+    display: block;
+}
+.nav__container{
+    z-index: 1;
+}
+
+.article__lema{
+    background-image: url(../img/ley-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+}   
+.h1__lema{
+    color: #fcfcfcc2;
+    font-size: 100px;
+    text-shadow: #000000;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.descripcion--div{
+    position: relative;
+    display: flex;
+    background-color: #000000de;
+    justify-content: center;
+}
+.titulo-descripcion{
+    position: relative;
+    font-size: 40px;
+    margin-left: 90px;
+    top: 40px;
+    color: darkgoldenrod;
+}
+
+.parrafos--descripcion{
+    position:relative;
+    display: inline-flex;
+    margin: 10% auto;
+    font-size: 30px;
+    color: darkgoldenrod;
+    margin-right: 30px;
+}
+.parrafos--descripcion p{
+    position: relative;
+    display: grid;
+    grid-row: 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 90px;
+    text-align: justify;
+}
+
+.card__section{
+    background-color: #3d330b78;
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.card__h2-especialidad{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+}
+
+.contendor__cards{
+    display: flex;
+    justify-content: center;    
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    width: 100%;
+}
+
+.descripcion--card{
+    position: relative;
+}
+
+.card{
+    background-color: #8f806a;
+    width: 280px;
+    height: 310px;
+    margin: 10px;
+    position: relative;
+    margin-top: 90px;
+    border-radius: 2%;
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0);
+}
+
+.card img{
+    height: 260px;
+    display: grid;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 34%, 0% 100%);
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+.h2__cards{
+    font-size: 25px;    
+    color: #ffffff;
+    text-decoration: none;
+    --clippy:polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.h2__cards:hover{
+    --clippy:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.h2__cards::after{
+    content: "";
+    display: block;
+    background: #ffd001;
+    width: 100%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
+}
+
+.fondo__bot{
+    background-color: #3d330b;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fcfcfcc2;
+    font-size: 80px;
+    height: 610px;
+}
+
+@media (max-width: 700px){
+    .h1__lema{
+        font-size: 40px;
+    }
+
+    .descripcion--div{
+        display: grid;
+    }
+
+    .parrafos--descripcion{
+        display: inline;
+    }
+    .parrafos--descripcion p{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .contendor__cards{
+        display:grid;
+    }
+
+    .card__h2-especialidad{
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+    }
+
+    .card img{
+        margin-top: 0px;
+        display: flex;
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        margin: 0 auto;
+    }
+    .card h2{
+        margin-top: 10px;
+    }
+    .card{
+        margin-top: 18px;
+        height: 310px;
+        width: 240px;
+        border-radius: 2%;
+    }
+
+    .fondo__bot h4{
+        font-size: 40px;
+        margin-left: 20px;
+    }
+}
